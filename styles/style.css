@@ -170,7 +170,7 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 18px;
+    gap: 1.25rem;
     margin: 0;
     opacity: 0;
     animation: fadeInUp 1s ease 0.4s forwards;
@@ -180,63 +180,193 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    position: relative;
+    width: 3rem;
+    height: 3rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     transition: all 0.3s ease;
     backdrop-filter: blur(5px);
-}
-
-/* Base icon styles */
-.social-icon {
-    width: 20px;
-    height: 20px;
-    transition: all 0.3s ease;
-    filter: brightness(0) invert(1);
-    opacity: 0.9;
-}
-
-/* Font Awesome icon specific styles */
-.social-links a i.social-icon {
-    width: auto;
-    height: auto;
-    font-size: 18px;
     color: var(--white);
-    filter: none;
+    text-decoration: none;
+}
+
+.social-links a i.social-icon {
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+    line-height: 1;
 }
 
 /* Hover effects */
 .social-links a:hover {
     transform: translateY(-3px);
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.15);
 }
 
-.social-links a:hover .social-icon {
+.social-links a:hover i.social-icon {
     opacity: 1;
 }
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .social-links {
-        gap: 15px;
-        margin-bottom: 2rem;
+        gap: 1rem;
     }
 
     .social-links a {
-        width: 35px;
-        height: 35px;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
-    .social-icon {
-        width: 18px;
-        height: 18px;
+    .social-links a i.social-icon {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .social-links {
+        gap: 0.875rem;
+    }
+
+    .social-links a {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .social-links a i.social-icon {
+        font-size: 1rem;
+    }
+}
+
+/* Remove any old image-based icon styles */
+.social-icon {
+    color: inherit;
+    display: block;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Section Container Adjustments */
+    .section-container {
+        padding: 0 1rem;
+    }
+
+    /* Skills Section Mobile Adjustments */
+    .skills-content {
+        padding: 1rem 0;
+    }
+
+    .skills-grid {
+        gap: 1rem;
+    }
+
+    .skill-card {
+        padding: 1.25rem;
+    }
+
+    /* Projects Section Mobile Adjustments */
+    .projects-grid {
+        gap: 1.25rem;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
+    }
+
+    .project-content {
+        padding: 1.25rem;
+    }
+
+    .project-tools {
+        gap: 0.5rem;
+    }
+
+    /* Contact Section Mobile Adjustments */
+    .contact-form {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .form-group {
+        margin-bottom: 1rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.7rem 0.9rem;
+    }
+
+    /* Social Links Mobile Adjustments */
+    .social-links {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Remove custom icon scaling */
+    .social-links a i.social-icon {
+        transform: none;
+    }
+
+    /* Mobile hover effects */
+    .social-links a:hover i.social-icon {
+        transform: none;
+    }
+
+    /* Section Title Mobile Adjustments */
+    .section-title {
+        margin-bottom: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    /* General Mobile Text Adjustments */
+    .skill-card h4 {
+        font-size: 1.1rem;
+    }
+
+    .skill-card li,
+    .project-summary p,
+    .contact-form label {
+        font-size: 0.95rem;
+    }
+
+    /* Mobile Spacing Adjustments */
+    .section {
+        padding: 4rem 0;
+    }
+
+    .skills-category {
+        margin-bottom: 2.5rem;
+    }
+
+    .category-title {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 480px) {
+    .section-container {
+        padding: 0 0.75rem;
+    }
+
+    .skills-content,
+    .project-content,
+    .contact-form {
+        padding: 1rem;
+    }
+
+    .social-links a {
+        width: 32px;
+        height: 32px;
     }
 
     .social-links a i.social-icon {
         font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 2rem;
     }
 }
 
@@ -439,30 +569,9 @@ body {
         margin-bottom: 2rem;
     }
 
-    /* Maintain icon proportions on mobile */
-    a[href*="github.com"] .social-icon {
-        transform: scale(1.2);
-    }
-
-    a[href*="linkedin.com"] .social-icon {
-        transform: scale(1.1);
-    }
-
-    a[href*="medium.com"] .social-icon {
-        transform: scale(2.5);
-    }
-
     /* Mobile hover effects */
-    a[href*="github.com"]:hover .social-icon {
-        transform: scale(1.2) translateY(-3px);
-    }
-
-    a[href*="linkedin.com"]:hover .social-icon {
-        transform: scale(1.1) translateY(-3px);
-    }
-
-    a[href*="medium.com"]:hover .social-icon {
-        transform: scale(2.5) translateY(-3px);
+    .social-links a:hover i.social-icon {
+        transform: none;
     }
 }
 
@@ -1235,7 +1344,7 @@ body {
 }
 
 .social-icons a i {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     transition: transform 0.3s ease;
 }
 
@@ -1276,7 +1385,7 @@ body {
     }
 
     .social-icons a i {
-        font-size: 1.2rem;
+        font-size: 1.125rem;
     }
 
     /* Scale reCAPTCHA on mobile */
