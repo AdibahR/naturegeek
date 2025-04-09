@@ -58,7 +58,7 @@
                         <i class="fab fa-linkedin social-icon"></i>
                     </a>
                     <a href="https://medium.com/@rina.adibah.011" target="_blank" rel="noopener noreferrer" aria-label="Medium Profile">
-                        <i class="fab fa-medium social-icon"></i>
+                        <i class="fab fa-medium-m social-icon"></i>
                     </a>
                     <a href="mailto:rina.adibah.011@gmail.com" aria-label="Send Email">
                         <i class="fas fa-envelope social-icon"></i>
@@ -473,7 +473,11 @@
 
                 <!-- Contact Form -->
                 <div class="contact-content">
-                    <form id="contactForm" class="contact-form" novalidate>
+                    <form id="contactForm" 
+                          class="contact-form" 
+                          action="https://formspree.io/f/mldjaela" 
+                          method="POST"
+                          novalidate>
                         <div class="form-group">
                             <label for="fullName">Full Name</label>
                             <input 
@@ -513,10 +517,10 @@
                             <span class="error-message" aria-live="polite"></span>
                         </div>
 
-                        <!-- reCAPTCHA -->
-                        <div class="recaptcha-container">
-                            <div class="g-recaptcha" data-sitekey="6LcU8AorAAAAAErc8mDMQcF70fQuE5fH2Hcibxj0"></div>
-                        </div>
+                        <!-- Hidden fields for Formspree -->
+                        <input type="hidden" name="_replyto" value="">
+                        <input type="hidden" name="_subject" value="New Portfolio Contact Form Submission">
+                        <input type="text" name="_gotcha" style="display:none">
 
                         <button type="submit" class="submit-btn">
                             <span>Submit</span>
@@ -526,6 +530,11 @@
                         <!-- Success Message (hidden by default) -->
                         <div class="success-message" role="alert" aria-hidden="true">
                             Thank you! Your message has been sent.
+                        </div>
+
+                        <!-- Error Message (hidden by default) -->
+                        <div class="error-message" role="alert" aria-hidden="true" style="display: none; margin-top: 1rem; padding: 1rem; background: #dc3545; color: white; border-radius: 5px; text-align: center;">
+                            Oops! There was a problem sending your message. Please try again.
                         </div>
                     </form>
 
@@ -549,7 +558,7 @@
                                target="_blank" 
                                rel="noopener noreferrer" 
                                aria-label="Read my articles on Medium">
-                                <i class="fab fa-medium"></i>
+                                <i class="fab fa-medium-m"></i>
                             </a>
                             <a href="mailto:rina.adibah.011@gmail.com" 
                                aria-label="Send me an email">
@@ -657,10 +666,11 @@
             });
         });
 
-        // Contact Form Validation
+        // Contact Form Validation and Submission
         document.addEventListener('DOMContentLoaded', () => {
             const contactForm = document.getElementById('contactForm');
             const successMessage = document.querySelector('.success-message');
+            const errorMessage = document.querySelector('.error-message');
 
             function showError(input, message) {
                 const errorElement = input.nextElementSibling;
@@ -681,7 +691,7 @@
                 return re.test(email.toLowerCase());
             }
 
-            contactForm.addEventListener('submit', (e) => {
+            contactForm.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 let isValid = true;
 
@@ -715,26 +725,45 @@
                     clearError(message);
                 }
 
-                // Validate reCAPTCHA
-                const recaptchaResponse = grecaptcha.getResponse();
-                if (!recaptchaResponse) {
-                    alert('Please complete the reCAPTCHA verification');
-                    isValid = false;
-                }
-
                 if (isValid) {
-                    // Here you would typically send the form data to your server
-                    // For now, we'll just show the success message
-                    contactForm.reset();
-                    grecaptcha.reset();
-                    successMessage.style.display = 'block';
-                    successMessage.setAttribute('aria-hidden', 'false');
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        successMessage.style.display = 'none';
-                        successMessage.setAttribute('aria-hidden', 'true');
-                    }, 5000);
+                    // Set the _replyto field value
+                    document.querySelector('input[name="_replyto"]').value = email.value;
+
+                    try {
+                        // Submit the form using Formspree
+                        const response = await fetch(contactForm.action, {
+                            method: 'POST',
+                            body: new FormData(contactForm),
+                            headers: {
+                                'Accept': 'application/json'
+                            }
+                        });
+
+                        if (response.ok) {
+                            // Show success message
+                            contactForm.reset();
+                            successMessage.style.display = 'block';
+                            successMessage.setAttribute('aria-hidden', 'false');
+                            errorMessage.style.display = 'none';
+                            errorMessage.setAttribute('aria-hidden', 'true');
+                            
+                            // Hide success message after 5 seconds
+                            setTimeout(() => {
+                                successMessage.style.display = 'none';
+                                successMessage.setAttribute('aria-hidden', 'true');
+                            }, 5000);
+                        } else {
+                            // Show error message
+                            errorMessage.style.display = 'block';
+                            errorMessage.setAttribute('aria-hidden', 'false');
+                            throw new Error('Form submission failed');
+                        }
+                    } catch (error) {
+                        // Show error message
+                        errorMessage.style.display = 'block';
+                        errorMessage.setAttribute('aria-hidden', 'false');
+                        console.error('Error:', error);
+                    }
                 }
             });
 
@@ -744,6 +773,5 @@
             });
         });
     </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
