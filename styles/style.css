@@ -95,6 +95,12 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+.nav-link.active {
+    background-color: var(--accent-color);
+    color: var(--white);
+    border-radius: 0.5rem;
+}
+
 /* Home Section Styles */
 .home {
     min-height: 100vh;
