@@ -390,79 +390,74 @@
                 1: {
                     title: 'Inference of FTIR Characterization Results of Human Blood Glucose Levels using Artificial Neural Network (ANN)',
                     journal: 'Applied Sciences and Engineering Technology Journal',
-                    domain: 'AI & Biomedical Engineering, Healthcare Innovation',
-                    function: 'Machine Learning, Signal Processing, Medical Diagnostics',
-                    desc: `This research introduces an innovative non-invasive approach to blood glucose measurement using Fourier Transform Infrared (FTIR) spectroscopy combined with Artificial Neural Networks. The study aims to develop a more comfortable and accessible alternative to traditional invasive blood glucose testing methods.`,
-                    businessProblem: `Traditional blood glucose measurement methods are invasive, causing discomfort and potential risks for patients who need regular monitoring. There's a pressing need for non-invasive, accurate, and user-friendly blood glucose measurement solutions.`,
-                    solution: [
-                        'Developed FTIR spectroscopy methodology for blood sample analysis',
-                        'Implemented ANN architecture for glucose level prediction',
-                        'Created data preprocessing pipeline for spectral data',
-                        'Validated results against traditional measurement methods'
-                    ],
-                    techniques: [
-                        'FTIR Spectroscopy: Advanced infrared analysis of blood samples',
-                        'Neural Network Design: Multi-layer perceptron architecture',
-                        'Signal Processing: Spectral data preprocessing and feature extraction',
-                        'Statistical Analysis: Validation and error assessment'
-                    ],
-                    impact: [
-                        'Achieved high accuracy in glucose level prediction',
-                        'Demonstrated feasibility of non-invasive measurement',
-                        'Reduced patient discomfort and testing complexity',
-                        'Potential for cost-effective diabetes management'
-                    ],
-                    challenges: [
-                        'Complex relationship between spectral data and glucose levels',
-                        'Need for extensive data preprocessing',
-                        'Ensuring measurement accuracy and reliability',
-                        'Hardware limitations and calibration requirements'
-                    ],
+                    domain: 'Healthcare – Medical Diagnostics, AI/ML',
                     tools: [
                         { name: 'Python', icon: 'fab fa-python' },
-                        { name: 'TensorFlow', icon: 'fas fa-brain' },
-                        { name: 'FANNTools', icon: 'fas fa-network-wired' },
-                        { name: 'MATLAB', icon: 'fas fa-square-root-alt' },
-                        { name: 'Data Analysis', icon: 'fas fa-chart-line' }
+                        { name: 'ANN', icon: 'fas fa-brain' },
+                        { name: 'FTIR', icon: 'fas fa-wave-square' },
+                        { name: 'Spectroscopy', icon: 'fas fa-chart-line' },
+                        { name: 'Data Analysis', icon: 'fas fa-chart-bar' }
+                    ],
+                    summary: 'Research project developing a non-invasive blood glucose measurement technique using Artificial Neural Networks (ANN) and spectroscopy, eliminating the need for chemical reagents.',
+                    businessProblem: 'Traditional blood glucose measurement methods are costly and require chemical reagents. The goal is to develop a non-invasive, cost-effective alternative using AI and spectroscopy.',
+                    solution: [
+                        'Collected blood glucose samples under three conditions: fasting, 15 minutes post-sugar, and 30 minutes post-sugar.',
+                        'Measured absorbance using Buchi NIRFLEX 500 spectroscope between 1000-2500 nm.',
+                        'Developed ANN inference engine to identify optimal wavelength candidates.',
+                        'Analyzed and categorized wavelength ranges based on absorbance and standard deviation.'
+                    ],
+                    techniques: [
+                        'Spectral Analysis: 1000-2500 nm wavelength range',
+                        'ANN Development: Custom neural network architecture',
+                        'Data Collection: Three-phase sampling methodology',
+                        'Wavelength Selection: Based on absorbance and deviation metrics',
+                        'Validation: Accuracy testing against traditional methods'
+                    ],
+                    impact: [
+                        'Identified optimal wavelength ranges: 1923.08-2000 nm for primary measurement',
+                        'Additional effective ranges: 1041.67-1063.83 nm, 1063.83-1086.96 nm, 1351.35-1388.89 nm',
+                        'Successfully demonstrated ANN effectiveness for glycemic status monitoring'
+                    ],
+                    challenges: [
+                        'Ensuring measurement accuracy across different physiological conditions',
+                        'Optimizing ANN architecture for real-time analysis',
+                        'Validating results against established measurement methods'
                     ]
                 },
                 2: {
                     title: 'Analysis of Purchasing Intention in the Fashion Industry: Enhancing Product Sales through Live Commerce Streaming',
                     journal: 'International Journal of Current Science Research and Review (IJCSRR)',
-                    domain: 'Marketing Analytics, E-Commerce, Consumer Behavior',
-                    function: 'Statistical Analysis, Business Strategy, Digital Marketing',
-                    desc: `This comprehensive study investigates the impact of live-streaming commerce on consumer purchasing decisions in Indonesia's fashion industry, with a particular focus on Small and Medium Enterprises (SMEs). Using advanced statistical modeling and behavioral analysis, the research provides valuable insights for digital marketing strategy optimization.`,
-                    businessProblem: `SMEs in the fashion industry face challenges in adapting to digital transformation and understanding the effectiveness of live commerce as a marketing tool. There's a need to identify key factors that influence consumer purchase intentions in the live-streaming environment.`,
-                    solution: [
-                        'Conducted extensive consumer behavior analysis',
-                        'Implemented PLS-SEM for multi-factor relationship analysis',
-                        'Evaluated media richness and price fairness impacts',
-                        'Assessed social media marketing effectiveness'
-                    ],
-                    techniques: [
-                        'Survey Design: Targeted sampling of live commerce users',
-                        'PLS-SEM Analysis: Complex path modeling and hypothesis testing',
-                        'Factor Analysis: Multi-variable relationship assessment',
-                        'Statistical Validation: Reliability and validity testing'
-                    ],
-                    impact: [
-                        'Identified key drivers of purchase intention',
-                        'Revealed critical role of brand image in decision making',
-                        'Provided actionable insights for SME strategy',
-                        'Enhanced understanding of live commerce dynamics'
-                    ],
-                    challenges: [
-                        'Complex market dynamics affecting behavior',
-                        'Limited impact of electronic word-of-mouth',
-                        'Need for continuous digital strategy adaptation',
-                        'Balancing price perception with value delivery'
-                    ],
+                    domain: 'E-Commerce – Marketing Analytics, Consumer Behavior',
                     tools: [
                         { name: 'SmartPLS', icon: 'fas fa-chart-bar' },
                         { name: 'SPSS', icon: 'fas fa-calculator' },
                         { name: 'Survey Analysis', icon: 'fas fa-poll' },
                         { name: 'Statistical Modeling', icon: 'fas fa-chart-line' },
                         { name: 'Data Visualization', icon: 'fas fa-chart-pie' }
+                    ],
+                    summary: 'Research study investigating how live-streaming commerce influences purchasing decisions in Indonesia\'s fashion industry, particularly focusing on SMEs.',
+                    businessProblem: 'SMEs need to understand the effectiveness of live commerce as a marketing tool and the factors that influence consumer purchase intentions in the digital era.',
+                    solution: [
+                        'Conducted consumer survey targeting fashion live-stream shoppers',
+                        'Analyzed multiple factors: media richness, price fairness, eWOM, social media marketing',
+                        'Applied PLS-SEM for comprehensive relationship analysis',
+                        'Evaluated brand image as a mediating factor'
+                    ],
+                    techniques: [
+                        'Survey Design: Targeted sampling of recent live commerce users',
+                        'PLS-SEM Analysis: Complex path modeling and mediation testing',
+                        'Factor Analysis: Multiple variable relationship assessment',
+                        'Statistical Validation: Reliability and validity testing'
+                    ],
+                    impact: [
+                        'Identified key drivers: media richness, price fairness, and social media marketing',
+                        'Revealed brand image as crucial mediator in purchase decisions',
+                        'Provided actionable insights for SMEs\' digital strategy optimization'
+                    ],
+                    challenges: [
+                        'Complex market dynamics affecting consumer behavior',
+                        'Limited impact of eWOM compared to other factors',
+                        'Need for continuous adaptation to evolving digital landscape'
                     ]
                 }
             };
@@ -474,23 +469,17 @@
                     const pub = pubDetails[this.getAttribute('data-pub')];
                     document.getElementById('pub-modal-body').innerHTML = `
                         <div style="margin-bottom: 2em;">
-                            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5em; color: var(--accent-color);">${pub.title}</h3>
-                            <p style="font-weight: 500; margin-bottom: 0.5em; color: var(--text-gray);">${pub.journal}</p>
-                            
-                            <div style="display: flex; gap: 1em; margin: 1.5em 0; flex-wrap: wrap;">
-                                <div style="background: #f8f9fa; padding: 1em; border-radius: 0.8em; flex: 1; min-width: 250px;">
-                                    <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Domain</h4>
-                                    <p>${pub.domain}</p>
-                                </div>
-                                <div style="background: #f8f9fa; padding: 1em; border-radius: 0.8em; flex: 1; min-width: 250px;">
-                                    <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Function</h4>
-                                    <p>${pub.function}</p>
-                                </div>
+                            <div style="text-align:center;margin-bottom:1.5em;">
+                                <img src="${this.closest('.publication-card').querySelector('.publication-image img').src}" 
+                                     alt="${pub.title}" 
+                                     style="width:100%;max-width:600px;height:auto;object-fit:contain;margin-bottom:1.5em;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);">
+                                <h3 style="font-size:1.3rem;font-weight:700;margin-bottom:0.3em;color:var(--text-color);">${pub.title}</h3>
+                                <p style="font-weight:600;color:var(--accent-color);margin-bottom:1em;">${pub.domain}</p>
                             </div>
 
                             <div style="margin: 1.5em 0;">
                                 <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Overview</h4>
-                                <p style="line-height: 1.6;">${pub.desc}</p>
+                                <p style="line-height: 1.6;">${pub.summary}</p>
                             </div>
 
                             <div style="margin: 1.5em 0;">
