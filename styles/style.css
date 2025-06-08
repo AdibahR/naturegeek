@@ -1136,6 +1136,8 @@ body {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .github-link,
@@ -1513,5 +1515,81 @@ body {
         bottom: -10px;
         width: 50px;
         height: 3px;
+    }
+}
+
+/* Publications Section UX */
+.publications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+@media (max-width: 900px) {
+    .publications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.publication-card {
+    background: var(--section-bg);
+    border-radius: 1.2em;
+    box-shadow: 0 5px 18px var(--shadow-color);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    position: relative;
+}
+.publication-card:hover {
+    box-shadow: 0 10px 32px var(--hover-shadow);
+    transform: translateY(-4px) scale(1.02);
+}
+.pub-badge {
+    font-size: 0.85rem;
+    padding: 0.3em 0.8em;
+    border-radius: 1em;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.02em;
+}
+.pub-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.45);
+    align-items: center;
+    justify-content: center;
+}
+.pub-modal-content {
+    background: #fff;
+    padding: 2.2em 2em;
+    max-width: 500px;
+    width: 90vw;
+    border-radius: 1.2em;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    position: relative;
+}
+#pub-modal-close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #888;
+    transition: color 0.2s;
+}
+#pub-modal-close:hover {
+    color: var(--accent-color);
+}
+@media (max-width: 600px) {
+    .publication-card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .pub-modal-content {
+        padding: 1.2em 0.5em;
     }
 }
