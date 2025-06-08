@@ -379,7 +379,7 @@
             </div>
             <!-- Modal Popup for Publication Details -->
             <div id="pub-modal" class="pub-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;">
-                <div class="pub-modal-content" style="background:#fff;padding:2.2em 2em;max-width:500px;width:90vw;border-radius:1.2em;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                <div class="pub-modal-content" style="background:#fff;padding:2.2em 2em;max-width:800px;width:90vw;border-radius:1.2em;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;max-height:90vh;overflow-y:auto;">
                     <button id="pub-modal-close" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.5em;cursor:pointer;color:#888;">&times;</button>
                     <div id="pub-modal-body"></div>
                 </div>
@@ -390,35 +390,183 @@
                 1: {
                     title: 'Inference of FTIR Characterization Results of Human Blood Glucose Levels using Artificial Neural Network (ANN)',
                     journal: 'Applied Sciences and Engineering Technology Journal',
-                    domain: 'Artificial Intelligence in Biomedical Engineering',
-                    function: 'Predictive Modeling, Experimental Design, Medical Technology Innovation',
-                    desc: `This research showcases the use of Artificial Neural Networks (ANN) to predict human blood glucose levels based on near-infrared spectroscopy (FTIR) without chemical reagents. I contributed to developing and testing an ANN inference model that identifies optimal wavelengths for glucose detection using Buchi NIRFLEX 500 spectroscope data. The model achieved high measurement accuracy by selecting wavelength ranges with the highest absorbance and deviation values. This work demonstrates my ability to apply AI for real-world biomedical challenges, combining experimental data with machine learning for non-invasive health diagnostics.`
+                    domain: 'AI & Biomedical Engineering, Healthcare Innovation',
+                    function: 'Machine Learning, Signal Processing, Medical Diagnostics',
+                    desc: `This research introduces an innovative non-invasive approach to blood glucose measurement using Fourier Transform Infrared (FTIR) spectroscopy combined with Artificial Neural Networks. The study aims to develop a more comfortable and accessible alternative to traditional invasive blood glucose testing methods.`,
+                    businessProblem: `Traditional blood glucose measurement methods are invasive, causing discomfort and potential risks for patients who need regular monitoring. There's a pressing need for non-invasive, accurate, and user-friendly blood glucose measurement solutions.`,
+                    solution: [
+                        'Developed FTIR spectroscopy methodology for blood sample analysis',
+                        'Implemented ANN architecture for glucose level prediction',
+                        'Created data preprocessing pipeline for spectral data',
+                        'Validated results against traditional measurement methods'
+                    ],
+                    techniques: [
+                        'FTIR Spectroscopy: Advanced infrared analysis of blood samples',
+                        'Neural Network Design: Multi-layer perceptron architecture',
+                        'Signal Processing: Spectral data preprocessing and feature extraction',
+                        'Statistical Analysis: Validation and error assessment'
+                    ],
+                    impact: [
+                        'Achieved high accuracy in glucose level prediction',
+                        'Demonstrated feasibility of non-invasive measurement',
+                        'Reduced patient discomfort and testing complexity',
+                        'Potential for cost-effective diabetes management'
+                    ],
+                    challenges: [
+                        'Complex relationship between spectral data and glucose levels',
+                        'Need for extensive data preprocessing',
+                        'Ensuring measurement accuracy and reliability',
+                        'Hardware limitations and calibration requirements'
+                    ],
+                    tools: [
+                        { name: 'Python', icon: 'fab fa-python' },
+                        { name: 'TensorFlow', icon: 'fas fa-brain' },
+                        { name: 'FANNTools', icon: 'fas fa-network-wired' },
+                        { name: 'MATLAB', icon: 'fas fa-square-root-alt' },
+                        { name: 'Data Analysis', icon: 'fas fa-chart-line' }
+                    ]
                 },
                 2: {
                     title: 'Analysis of Purchasing Intention in the Fashion Industry: Enhancing Product Sales through Live Commerce Streaming',
                     journal: 'International Journal of Current Science Research and Review (IJCSRR)',
-                    domain: 'Marketing Analytics, Consumer Behavior, E-Commerce',
-                    function: 'Quantitative Research, Behavioral Analysis, Business Strategy Insight',
-                    desc: `This study explores how live-streaming commerce influences purchasing decisions in Indonesia's fashion industry, especially among SMEs. I used a quantitative approach with Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyze key behavioral drivers such as media richness, price fairness, and social media marketing. The research provides data-driven insights into optimizing digital marketing strategies. This project reflects my skills in statistical modeling, consumer analytics, and connecting data insights to business outcomes.`
+                    domain: 'Marketing Analytics, E-Commerce, Consumer Behavior',
+                    function: 'Statistical Analysis, Business Strategy, Digital Marketing',
+                    desc: `This comprehensive study investigates the impact of live-streaming commerce on consumer purchasing decisions in Indonesia's fashion industry, with a particular focus on Small and Medium Enterprises (SMEs). Using advanced statistical modeling and behavioral analysis, the research provides valuable insights for digital marketing strategy optimization.`,
+                    businessProblem: `SMEs in the fashion industry face challenges in adapting to digital transformation and understanding the effectiveness of live commerce as a marketing tool. There's a need to identify key factors that influence consumer purchase intentions in the live-streaming environment.`,
+                    solution: [
+                        'Conducted extensive consumer behavior analysis',
+                        'Implemented PLS-SEM for multi-factor relationship analysis',
+                        'Evaluated media richness and price fairness impacts',
+                        'Assessed social media marketing effectiveness'
+                    ],
+                    techniques: [
+                        'Survey Design: Targeted sampling of live commerce users',
+                        'PLS-SEM Analysis: Complex path modeling and hypothesis testing',
+                        'Factor Analysis: Multi-variable relationship assessment',
+                        'Statistical Validation: Reliability and validity testing'
+                    ],
+                    impact: [
+                        'Identified key drivers of purchase intention',
+                        'Revealed critical role of brand image in decision making',
+                        'Provided actionable insights for SME strategy',
+                        'Enhanced understanding of live commerce dynamics'
+                    ],
+                    challenges: [
+                        'Complex market dynamics affecting behavior',
+                        'Limited impact of electronic word-of-mouth',
+                        'Need for continuous digital strategy adaptation',
+                        'Balancing price perception with value delivery'
+                    ],
+                    tools: [
+                        { name: 'SmartPLS', icon: 'fas fa-chart-bar' },
+                        { name: 'SPSS', icon: 'fas fa-calculator' },
+                        { name: 'Survey Analysis', icon: 'fas fa-poll' },
+                        { name: 'Statistical Modeling', icon: 'fas fa-chart-line' },
+                        { name: 'Data Visualization', icon: 'fas fa-chart-pie' }
+                    ]
                 }
             };
+
             // Modal logic
             document.querySelectorAll('.pub-readmore').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
                     const pub = pubDetails[this.getAttribute('data-pub')];
                     document.getElementById('pub-modal-body').innerHTML = `
-                        <h3 style='font-size:1.1rem;font-weight:700;margin-bottom:0.5em;'>${pub.title}</h3>
-                        <p style='font-weight:500;margin-bottom:0.5em;'>${pub.journal}</p>
-                        <p style='margin-bottom:0.5em;'><b>Domain:</b> ${pub.domain}</p>
-                        <p style='margin-bottom:0.5em;'><b>Function:</b> ${pub.function}</p>
-                        <p style='margin-bottom:0.5em;'>${pub.desc}</p>
+                        <div style="margin-bottom: 2em;">
+                            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5em; color: var(--accent-color);">${pub.title}</h3>
+                            <p style="font-weight: 500; margin-bottom: 0.5em; color: var(--text-gray);">${pub.journal}</p>
+                            
+                            <div style="display: flex; gap: 1em; margin: 1.5em 0; flex-wrap: wrap;">
+                                <div style="background: #f8f9fa; padding: 1em; border-radius: 0.8em; flex: 1; min-width: 250px;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Domain</h4>
+                                    <p>${pub.domain}</p>
+                                </div>
+                                <div style="background: #f8f9fa; padding: 1em; border-radius: 0.8em; flex: 1; min-width: 250px;">
+                                    <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Function</h4>
+                                    <p>${pub.function}</p>
+                                </div>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Overview</h4>
+                                <p style="line-height: 1.6;">${pub.desc}</p>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Business Problem</h4>
+                                <p style="line-height: 1.6;">${pub.businessProblem}</p>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Solution Approach</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    ${pub.solution.map(item => `
+                                        <li style="margin-bottom: 0.5em; padding-left: 1.5em; position: relative;">
+                                            <i class="fas fa-check" style="color: var(--accent-color); position: absolute; left: 0; top: 0.25em;"></i>
+                                            ${item}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Technical Approach</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    ${pub.techniques.map(item => `
+                                        <li style="margin-bottom: 0.5em; padding-left: 1.5em; position: relative;">
+                                            <i class="fas fa-cog" style="color: var(--accent-color); position: absolute; left: 0; top: 0.25em;"></i>
+                                            ${item}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Impact & Results</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    ${pub.impact.map(item => `
+                                        <li style="margin-bottom: 0.5em; padding-left: 1.5em; position: relative;">
+                                            <i class="fas fa-star" style="color: var(--accent-color); position: absolute; left: 0; top: 0.25em;"></i>
+                                            ${item}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Challenges</h4>
+                                <ul style="list-style-type: none; padding: 0;">
+                                    ${pub.challenges.map(item => `
+                                        <li style="margin-bottom: 0.5em; padding-left: 1.5em; position: relative;">
+                                            <i class="fas fa-exclamation-circle" style="color: var(--accent-color); position: absolute; left: 0; top: 0.25em;"></i>
+                                            ${item}
+                                        </li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+
+                            <div style="margin: 1.5em 0;">
+                                <h4 style="font-weight: 600; margin-bottom: 0.5em; color: var(--accent-color);">Tools & Technologies</h4>
+                                <div style="display: flex; gap: 1em; flex-wrap: wrap;">
+                                    ${pub.tools.map(tool => `
+                                        <div style="background: #f8f9fa; padding: 0.8em 1.2em; border-radius: 0.6em; display: flex; align-items: center; gap: 0.5em;">
+                                            <i class="${tool.icon}" style="color: var(--accent-color);"></i>
+                                            <span>${tool.name}</span>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        </div>
                     `;
                     document.getElementById('pub-modal').style.display = 'flex';
                 });
             });
+
             document.getElementById('pub-modal-close').onclick = function() {
                 document.getElementById('pub-modal').style.display = 'none';
             };
+
             window.onclick = function(event) {
                 if (event.target === document.getElementById('pub-modal')) {
                     document.getElementById('pub-modal').style.display = 'none';
@@ -622,7 +770,7 @@
                                     View Details
                                 </button>
                                 <div style="display:flex;gap:0.5em;justify-content:center;">
-                                    <a href="https://github.com/AdibahR/CRUD-Car-Application" target="_blank" 
+                                    <a href="https://github.com/AdibahR" target="_blank" 
                                         style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.3em;padding:0.5em;background:var(--background-color);color:var(--text-color);text-decoration:none;border-radius:0.5em;font-size:0.9rem;transition:all 0.3s ease;border:1px solid transparent;"
                                         onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)';this.style.background='white';this.style.borderColor='var(--accent-color)';this.style.color='var(--accent-color)';"
                                         onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';this.style.background='var(--background-color)';this.style.borderColor='transparent';this.style.color='var(--text-color)';">
