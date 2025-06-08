@@ -589,6 +589,66 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Project: Telco Customer Churn Prediction – IndoHome -->
+                    <div class="project-card" data-category="data-science">
+                        <div class="project-thumbnail" aria-label="Telco Churn Project Icon">
+                            <img src="images/telco-churn-thumbnail.png" alt="Telco Churn Thumbnail" style="width:60px;height:60px;object-fit:contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Customer Churn Prediction – Telco (IndoHome)</h3>
+                            <div class="project-summary">
+                                <div class="summary-section">
+                                    <h4>Domain</h4>
+                                    <p>Telecommunication – Customer Retention, Marketing Analytics</p>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Deskripsi Singkat</h4>
+                                    <p>Predicting customer churn for IndoHome using ML and analytics to support targeted retention strategies.</p>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Tools & Teknologi</h4>
+                                    <p>Python (Scikit-learn, ADASYN), Streamlit, Tableau, Pandas, Matplotlib, Seaborn, Plotly</p>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="telco-churn">View Details</button>
+                                <a href="https://github.com/AdibahR/Indohome-telco-churn-app" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="https://public.tableau.com/app/profile/rina.adibah/viz/IndoHomeChurnAnalysisDashboard/Dashboard1-ExecutiveOverview" target="_blank" class="publication-link"><i class="fas fa-chart-bar"></i> Dashboard</a>
+                                <a href="https://indohome-telco-churn-app-jaqqq4c38dcepxzzitrbzc.streamlit.app" target="_blank" class="publication-link"><i class="fas fa-globe"></i> Webapp</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project: E-Commerce Customer Churn Prediction (template dummy) -->
+                    <div class="project-card" data-category="data-science">
+                        <div class="project-thumbnail" aria-label="E-Commerce Churn Project Icon">
+                            <img src="images/ecommerce-churn-thumbnail.png" alt="E-Commerce Churn Thumbnail" style="width:60px;height:60px;object-fit:contain;">
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-Commerce Customer Churn Prediction</h3>
+                            <div class="project-summary">
+                                <div class="summary-section">
+                                    <h4>Domain</h4>
+                                    <p>E-Commerce – Customer Analytics, Retention Strategy</p>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Deskripsi Singkat</h4>
+                                    <p>Machine learning project to predict churn in an e-commerce platform and optimize retention campaigns.</p>
+                                </div>
+                                <div class="summary-section">
+                                    <h4>Tools & Teknologi</h4>
+                                    <p>Python, Scikit-learn, Pandas, Streamlit, Tableau</p>
+                                </div>
+                            </div>
+                            <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="ecommerce-churn">View Details</button>
+                                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                                <a href="#" class="publication-link"><i class="fas fa-chart-bar"></i> Dashboard</a>
+                                <a href="#" class="publication-link"><i class="fas fa-globe"></i> Webapp</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -944,6 +1004,70 @@
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+
+        // Project Details Modal
+        const projectDetails = {
+            'telco-churn': {
+                thumbnail: 'images/telco-churn-thumbnail.png',
+                title: 'Customer Churn Prediction – Telco (IndoHome)',
+                domain: 'Telecommunication – Customer Retention, Marketing Analytics',
+                summary: 'This project focuses on predicting customer churn for IndoHome, a fictional broadband telecom provider. Using machine learning and business analytics, it aims to identify high-risk customers and support targeted retention strategies in a competitive telecom market.',
+                businessProblem: 'IndoHome faces a high churn rate, impacting revenue and business growth. The goal is to build a data-driven model that helps the marketing and customer management teams detect churn risk early and take proactive actions.',
+                solution: 'Conducted deep EDA to identify churn drivers (e.g., contract type, services used, tenure). Built a Logistic Regression model with ADASYN to handle class imbalance. Deployed the solution using Streamlit and created three interactive Tableau dashboards for business teams. Designed a cost-saving simulation to compare model-driven strategy vs. mass promotion vs. no intervention.',
+                techniques: ['Feature Engineering: Added ServiceCount, TenureGroup, PriceVariation', 'Data Processing: OneHotEncoding, StandardScaler', 'Resampling: ADASYN to balance minority churn class', 'Threshold Optimization: Custom threshold for maximizing recall', 'Model Evaluation: F2-score, Recall, Precision, Confusion Matrix', 'Deployment: Streamlit for interface, Tableau for executive dashboards'],
+                impact: 'Demonstrated how model-based targeting could reduce retention cost significantly compared to mass offers or doing nothing. Enabled better resource allocation by focusing only on high-risk customers.',
+                challenges: 'Public dataset may not reflect real IndoHome behaviors → Real-world deployment requires CRM integration. Logistic Regression was chosen for interpretability, enabling actionable business insights. Model was kept lightweight for fast deployment and real-time prediction.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/Indohome-telco-churn-app', icon: 'fab fa-github' },
+                    { label: 'Dashboard', url: 'https://public.tableau.com/app/profile/rina.adibah/viz/IndoHomeChurnAnalysisDashboard/Dashboard1-ExecutiveOverview', icon: 'fas fa-chart-bar' },
+                    { label: 'Webapp', url: 'https://indohome-telco-churn-app-jaqqq4c38dcepxzzitrbzc.streamlit.app', icon: 'fas fa-globe' }
+                ]
+            },
+            'ecommerce-churn': {
+                thumbnail: 'images/ecommerce-churn-thumbnail.png',
+                title: 'E-Commerce Customer Churn Prediction',
+                domain: 'E-Commerce – Customer Analytics, Retention Strategy',
+                summary: 'Machine learning project to predict churn in an e-commerce platform and optimize retention campaigns.',
+                businessProblem: 'E-commerce platforms face high churn rates due to competition and low switching costs. The goal is to predict churn and enable targeted retention offers.',
+                solution: 'Built a classification model using Python and Scikit-learn. Deployed with Streamlit and visualized insights in Tableau.',
+                techniques: ['Feature Engineering', 'Data Preprocessing', 'Model Selection', 'Evaluation Metrics', 'Deployment'],
+                impact: 'Improved retention campaign ROI by focusing on high-risk customers.',
+                challenges: 'Data privacy and integration with real-time systems.',
+                links: [
+                    { label: 'GitHub', url: '#', icon: 'fab fa-github' },
+                    { label: 'Dashboard', url: '#', icon: 'fas fa-chart-bar' },
+                    { label: 'Webapp', url: '#', icon: 'fas fa-globe' }
+                ]
+            }
+        };
+        document.querySelectorAll('.project-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const proj = projectDetails[this.getAttribute('data-project')];
+                document.getElementById('project-modal-body').innerHTML = `
+                    <div style='text-align:center;margin-bottom:1em;'><img src='${proj.thumbnail}' alt='${proj.title} Thumbnail' style='width:120px;height:120px;object-fit:contain;'></div>
+                    <h3 style='font-size:1.1rem;font-weight:700;margin-bottom:0.5em;'>${proj.title}</h3>
+                    <p style='font-weight:500;margin-bottom:0.5em;'>${proj.domain}</p>
+                    <p style='margin-bottom:0.5em;'><b>Summary:</b> ${proj.summary}</p>
+                    <p style='margin-bottom:0.5em;'><b>Business Problem:</b> ${proj.businessProblem}</p>
+                    <p style='margin-bottom:0.5em;'><b>Solution Overview:</b> ${proj.solution}</p>
+                    <ul style='margin-bottom:0.5em;padding-left:1.2em;'>${proj.techniques.map(t=>`<li>${t}</li>`).join('')}</ul>
+                    <p style='margin-bottom:0.5em;'><b>Business Impact:</b> ${proj.impact}</p>
+                    <p style='margin-bottom:0.5em;'><b>Challenges & Insights:</b> ${proj.challenges}</p>
+                    <div style='display:flex;gap:0.7em;justify-content:center;margin-top:1em;'>
+                        ${proj.links.map(l=>`<a href='${l.url}' target='_blank' style='font-size:1.1em;'><i class='${l.icon}'></i> ${l.label}</a>`).join('')}
+                    </div>
+                `;
+                document.getElementById('project-modal').style.display = 'flex';
+            });
+        });
+        document.getElementById('project-modal-close').onclick = function() {
+            document.getElementById('project-modal').style.display = 'none';
+        };
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('project-modal')) {
+                document.getElementById('project-modal').style.display = 'none';
+            }
+        };
     </script>
 </body>
 </html>
