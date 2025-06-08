@@ -29,6 +29,7 @@
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                    <li><a href="#publications" class="nav-link">Publications</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -279,6 +280,103 @@
                     </div>
                 </div>
             </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="section">
+            <div class="section-container">
+                <h2 class="section-title">Publications</h2>
+                <div class="publications-grid skills-grid">
+                    <!-- Publication 1 -->
+                    <div class="publication-card skill-card">
+                        <div class="publication-image" style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center;">
+                            <img src="images/Publication 1.png" alt="FTIR Characterization ANN Publication" style="width: 100%; max-width: 720px; height: auto; display: block;">
+                        </div>
+                        <span class="pub-badge" style="background:#f4f4f4;color:#222;font-size:0.95rem;padding:0.35em 1em;border-radius:1em;display:inline-block;margin-bottom:0.7em;">AI & Biomedical</span>
+                        <div style="display:flex;gap:0.7em;justify-content:center;margin-bottom:0.7em;">
+                            <i class="fas fa-brain" title="Artificial Intelligence" style="color:#3d3d3d;font-size:1.5em;"></i>
+                            <i class="fas fa-vial" title="Medical" style="color:#3d3d3d;font-size:1.5em;"></i>
+                            <i class="fas fa-flask" title="Experiment" style="color:#3d3d3d;font-size:1.5em;"></i>
+                        </div>
+                        <h3 style="font-size: 1.05rem; font-weight: 700; text-align: center; margin-bottom: 0.3rem;">Inference of FTIR Characterization Results of Human Blood Glucose Levels using Artificial Neural Network (ANN)</h3>
+                        <p style="text-align: center; margin-bottom: 0.2rem; font-weight: 500; font-size:0.95rem;">Applied Sciences and Engineering Technology Journal</p>
+                        <p style="text-align: center; margin-bottom: 0.5rem; font-size:0.92rem;color:var(--text-gray);">Published: Mar 17, 2025</p>
+                        <p class="pub-summary" style="text-align: center; margin-bottom: 1rem; font-size: 0.95rem;">Non-invasive blood glucose prediction using FTIR and ANN for medical innovation.</p>
+                        <div style="display:flex;gap:0.5em;justify-content:center;">
+                            <a href="https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/view/5483?articlesBySimilarityPage=44" target="_blank" class="cta-button" style="min-width:90px;font-size:0.95rem;padding:0.6em 1.2em;">View Publication</a>
+                            <button class="cta-button pub-readmore" data-pub="1" style="min-width:90px;font-size:0.95rem;padding:0.6em 1.2em;">Read More</button>
+                        </div>
+                    </div>
+                    <!-- Publication 2 -->
+                    <div class="publication-card skill-card">
+                        <div class="publication-image" style="margin-bottom: 1rem; display: flex; justify-content: center; align-items: center;">
+                            <img src="images/Publication 2.png" alt="Live Commerce Fashion Industry Publication" style="width: 100%; max-width: 480px; height: auto; display: block;">
+                        </div>
+                        <span class="pub-badge" style="background:#f4f4f4;color:#222;font-size:0.95rem;padding:0.35em 1em;border-radius:1em;display:inline-block;margin-bottom:0.7em;">Marketing Analytics</span>
+                        <div style="display:flex;gap:0.7em;justify-content:center;margin-bottom:0.7em;">
+                            <i class="fas fa-bullhorn" title="Marketing" style="color:#000;font-size:1.5em;"></i>
+                            <i class="fas fa-shopping-cart" title="E-Commerce" style="color:#000;font-size:1.5em;"></i>
+                            <i class="fas fa-chart-bar" title="Analytics" style="color:#000;font-size:1.5em;"></i>
+                        </div>
+                        <h3 style="font-size: 1.05rem; font-weight: 700; text-align: center; margin-bottom: 0.3rem;">Analysis of Purchasing Intention in the Fashion Industry: Enhancing Product Sales through Live Commerce Streaming</h3>
+                        <p style="text-align: center; margin-bottom: 0.2rem; font-weight: 500; font-size:0.95rem;">International Journal of Current Science Research and Review (IJCSRR)</p>
+                        <p style="text-align: center; margin-bottom: 0.5rem; font-size:0.92rem;color:var(--text-gray);">Published: Mar 28, 2024</p>
+                        <p class="pub-summary" style="text-align: center; margin-bottom: 1rem; font-size: 0.95rem;">Live-streaming commerce impact on fashion industry purchase intention in Indonesia.</p>
+                        <div style="display:flex;gap:0.5em;justify-content:center;">
+                            <a href="https://ijcsrr.org/single-view/?id=15625&pid=15277" target="_blank" class="cta-button" style="min-width:90px;font-size:0.95rem;padding:0.6em 1.2em;">View Publication</a>
+                            <button class="cta-button pub-readmore" data-pub="2" style="min-width:90px;font-size:0.95rem;padding:0.6em 1.2em;">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Popup for Publication Details -->
+            <div id="pub-modal" class="pub-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;">
+                <div class="pub-modal-content" style="background:#fff;padding:2.2em 2em;max-width:500px;width:90vw;border-radius:1.2em;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                    <button id="pub-modal-close" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.5em;cursor:pointer;color:#888;">&times;</button>
+                    <div id="pub-modal-body"></div>
+                </div>
+            </div>
+            <script>
+            // Modal publication data
+            const pubDetails = {
+                1: {
+                    title: 'Inference of FTIR Characterization Results of Human Blood Glucose Levels using Artificial Neural Network (ANN)',
+                    journal: 'Applied Sciences and Engineering Technology Journal',
+                    domain: 'Artificial Intelligence in Biomedical Engineering',
+                    function: 'Predictive Modeling, Experimental Design, Medical Technology Innovation',
+                    desc: `This research showcases the use of Artificial Neural Networks (ANN) to predict human blood glucose levels based on near-infrared spectroscopy (FTIR) without chemical reagents. I contributed to developing and testing an ANN inference model that identifies optimal wavelengths for glucose detection using Buchi NIRFLEX 500 spectroscope data. The model achieved high measurement accuracy by selecting wavelength ranges with the highest absorbance and deviation values. This work demonstrates my ability to apply AI for real-world biomedical challenges, combining experimental data with machine learning for non-invasive health diagnostics.`
+                },
+                2: {
+                    title: 'Analysis of Purchasing Intention in the Fashion Industry: Enhancing Product Sales through Live Commerce Streaming',
+                    journal: 'International Journal of Current Science Research and Review (IJCSRR)',
+                    domain: 'Marketing Analytics, Consumer Behavior, E-Commerce',
+                    function: 'Quantitative Research, Behavioral Analysis, Business Strategy Insight',
+                    desc: `This study explores how live-streaming commerce influences purchasing decisions in Indonesia's fashion industry, especially among SMEs. I used a quantitative approach with Partial Least Squares Structural Equation Modeling (PLS-SEM) to analyze key behavioral drivers such as media richness, price fairness, and social media marketing. The research provides data-driven insights into optimizing digital marketing strategies. This project reflects my skills in statistical modeling, consumer analytics, and connecting data insights to business outcomes.`
+                }
+            };
+            // Modal logic
+            document.querySelectorAll('.pub-readmore').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const pub = pubDetails[this.getAttribute('data-pub')];
+                    document.getElementById('pub-modal-body').innerHTML = `
+                        <h3 style='font-size:1.1rem;font-weight:700;margin-bottom:0.5em;'>${pub.title}</h3>
+                        <p style='font-weight:500;margin-bottom:0.5em;'>${pub.journal}</p>
+                        <p style='margin-bottom:0.5em;'><b>Domain:</b> ${pub.domain}</p>
+                        <p style='margin-bottom:0.5em;'><b>Function:</b> ${pub.function}</p>
+                        <p style='margin-bottom:0.5em;'>${pub.desc}</p>
+                    `;
+                    document.getElementById('pub-modal').style.display = 'flex';
+                });
+            });
+            document.getElementById('pub-modal-close').onclick = function() {
+                document.getElementById('pub-modal').style.display = 'none';
+            };
+            window.onclick = function(event) {
+                if (event.target === document.getElementById('pub-modal')) {
+                    document.getElementById('pub-modal').style.display = 'none';
+                }
+            };
+            </script>
         </section>
 
         <!-- Education Section -->
