@@ -1145,206 +1145,6 @@
 
         // Project Details Modal
         const projectDetails = {
-            'neural-network': {
-                thumbnail: 'images/Publication 1.png',
-                title: 'Non-Invasive Blood Glucose Detection using ANN',
-                domain: 'Healthcare – Medical Diagnostics, AI/ML',
-                tools: [
-                    { name: 'Python', icon: 'fab fa-python' },
-                    { name: 'ANN', icon: 'fas fa-brain' },
-                    { name: 'FTIR', icon: 'fas fa-wave-square' },
-                    { name: 'Spectroscopy', icon: 'fas fa-microscope' },
-                    { name: 'Data Analysis', icon: 'fas fa-chart-line' }
-                ],
-                summary: 'Research project focused on developing a non-invasive blood glucose measurement technique using Artificial Neural Networks (ANN) and spectroscopy, eliminating the need for chemical reagents.',
-                businessProblem: 'Traditional blood glucose measurements are costly and require chemical reagents. The goal is to develop a non-invasive, cost-effective method using ANN and spectroscopy.',
-                solution: [
-                    'Collected blood glucose samples under three conditions: fasting, 15 minutes post-sugar, and 30 minutes post-sugar.',
-                    'Measured absorbance using Buchi NIRFLEX 500 spectroscope between 1000-2500 nm.',
-                    'Developed ANN inference engine to identify optimal wavelength candidates.',
-                    'Analyzed wavelengths based on absorbance and standard deviation.'
-                ],
-                techniques: [
-                    'Spectral Analysis: 1000-2500 nm wavelength range',
-                    'ANN Development: Custom inference engine',
-                    'Wavelength Selection: Based on absorbance and standard deviation',
-                    'Validation: Accuracy testing across different glycemic states'
-                ],
-                impact: [
-                    'Identified optimal wavelength ranges: 1923.08-2000 nm',
-                    'Additional accurate ranges: 1041.67-1063.83 nm, 1063.83-1086.96 nm, 1351.35-1388.89 nm',
-                    'Successfully demonstrated ANN effectiveness for non-invasive glucose monitoring'
-                ],
-                challenges: [
-                    'Complex relationship between spectral data and glucose levels',
-                    'Need for precise calibration and validation',
-                    'Ensuring accuracy across different physiological conditions'
-                ],
-                links: [
-                    { label: 'GitHub', url: 'https://github.com/AdibahR', icon: 'fab fa-github' },
-                    { label: 'Publication', url: 'https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/view/5483?articlesBySimilarityPage=44', icon: 'fas fa-file-alt' }
-                ]
-            },
-            'live-commerce': {
-                thumbnail: 'images/Publication 2.png',
-                title: 'Live Commerce Behavior in Fashion Industry',
-                domain: 'E-Commerce – Marketing Analytics, Consumer Behavior',
-                tools: [
-                    { name: 'SmartPLS', icon: 'fas fa-chart-bar' },
-                    { name: 'SPSS', icon: 'fas fa-calculator' },
-                    { name: 'Survey Tools', icon: 'fab fa-google' },
-                    { name: 'Statistical Analysis', icon: 'fas fa-chart-line' },
-                    { name: 'Data Visualization', icon: 'fas fa-chart-pie' }
-                ],
-                summary: 'Research study investigating the impact of live-streaming commerce on Indonesian fashion industry SMEs, analyzing factors affecting consumer purchase intentions.',
-                businessProblem: 'SMEs need to understand how live-streaming commerce influences purchase decisions to optimize their digital marketing strategies.',
-                solution: [
-                    'Conducted consumer survey targeting fashion live-stream shoppers',
-                    'Analyzed factors: media richness, price fairness, eWOM, social media marketing',
-                    'Applied PLS-SEM for statistical analysis',
-                    'Evaluated brand image as mediating factor'
-                ],
-                techniques: [
-                    'Survey Design: Targeted sampling of active consumers',
-                    'PLS-SEM Analysis: Complex path modeling',
-                    'Factor Analysis: Multiple variable assessment',
-                    'Statistical Validation: Reliability and validity testing'
-                ],
-                impact: [
-                    'Identified key drivers: media richness, price fairness, social media marketing',
-                    'Revealed brand image as crucial mediator',
-                    'Provided actionable insights for SME digital strategy'
-                ],
-                challenges: [
-                    'Complex market dynamics in Indonesian e-commerce',
-                    'Multiple interacting factors affecting purchase decisions',
-                    'Need for robust statistical validation'
-                ],
-                links: [
-                    { label: 'GitHub', url: 'https://github.com/AdibahR', icon: 'fab fa-github' },
-                    { label: 'Publication', url: 'https://ijcsrr.org/single-view/?id=15625&pid=15277', icon: 'fas fa-file-alt' }
-                ]
-            },
-            'car-management': {
-                thumbnail: 'images/Car Management System.png',
-                title: 'Car Management System with CRUD Operations',
-                domain: 'Application Development – Database Management',
-                tools: [
-                    { name: 'Python', icon: 'fab fa-python' },
-                    { name: 'CLI', icon: 'fas fa-terminal' },
-                    { name: 'Tabulate', icon: 'fas fa-table' },
-                    { name: 'Colorama', icon: 'fas fa-palette' },
-                    { name: 'Authentication', icon: 'fas fa-lock' }
-                ],
-                summary: 'A comprehensive Python-based car rental and fleet management system with dual interfaces for customers and administrators.',
-                businessProblem: 'Need for an efficient system to manage car rentals and fleet maintenance with secure role-based access.',
-                solution: [
-                    'Developed dual interface system (customer and admin)',
-                    'Implemented complete CRUD operations for inventory management',
-                    'Created secure authentication system',
-                    'Built user-friendly CLI interface'
-                ],
-                techniques: [
-                    'CRUD Operations: Full database management',
-                    'Authentication: Role-based access control',
-                    'Data Validation: Input verification and error handling',
-                    'UI Design: Interactive CLI with Colorama',
-                    'Output Formatting: Tabulate for data presentation'
-                ],
-                impact: [
-                    'Streamlined rental process for customers',
-                    'Enhanced inventory management for administrators',
-                    'Improved data security and access control'
-                ],
-                challenges: [
-                    'Balancing functionality with user experience in CLI',
-                    'Implementing secure authentication system',
-                    'Ensuring data integrity across operations'
-                ],
-                links: [
-                    { label: 'GitHub', url: 'https://github.com/AdibahR/CRUD-Car-Application', icon: 'fab fa-github' }
-                ]
-            },
-            'saas-sales': {
-                thumbnail: 'images/SaaS Sales.png',
-                title: 'SaaS Sales Growth Optimization via Analytics',
-                domain: 'Business Analytics – Sales Optimization',
-                tools: [
-                    { name: 'Python', icon: 'fab fa-python' },
-                    { name: 'Pandas', icon: 'fas fa-table' },
-                    { name: 'Seaborn', icon: 'fas fa-chart-area' },
-                    { name: 'Matplotlib', icon: 'fas fa-chart-line' },
-                    { name: 'Data Analysis', icon: 'fas fa-analytics' }
-                ],
-                summary: 'Analysis of global SaaS company sales data across 48 countries and 262 cities to optimize sales performance and strategy.',
-                businessProblem: 'Need to identify growth opportunities and optimize sales strategies across multiple dimensions including geography, products, and customer segments.',
-                solution: [
-                    'Cleaned and transformed raw sales data using Python',
-                    'Performed comprehensive EDA with visualizations',
-                    'Analyzed discount impact and seasonal patterns',
-                    'Identified top-performing segments and products'
-                ],
-                techniques: [
-                    'Data Cleaning: Python/Pandas preprocessing',
-                    'EDA: Multi-dimensional analysis',
-                    'Visualization: Seaborn/Matplotlib',
-                    'Statistical Analysis: Correlation and trend analysis'
-                ],
-                impact: [
-                    'Identified ContactMatcher and FinanceHub as top performers',
-                    'Discovered APJ region growth potential',
-                    'Found optimal discount strategies',
-                    'Mapped seasonal sales patterns'
-                ],
-                challenges: [
-                    'Complex multi-regional data analysis',
-                    'Balancing multiple performance metrics',
-                    'Identifying actionable insights from large dataset'
-                ],
-                links: [
-                    { label: 'GitHub', url: 'https://github.com/AdibahR/AWS-SaaS-Sales-Data-Analysis-for-Business-Growth-Optimization', icon: 'fab fa-github' }
-                ]
-            },
-            'housing-price': {
-                thumbnail: 'images/California Housing.png',
-                title: 'California Housing Price Prediction',
-                domain: 'Machine Learning – Real Estate Analytics',
-                tools: [
-                    { name: 'Python', icon: 'fab fa-python' },
-                    { name: 'Scikit-learn', icon: 'fas fa-cogs' },
-                    { name: 'XGBoost', icon: 'fas fa-bolt' },
-                    { name: 'Feature Engineering', icon: 'fas fa-code-branch' },
-                    { name: 'Data Analysis', icon: 'fas fa-chart-line' }
-                ],
-                summary: 'Machine learning project to predict median housing prices in California using census data, achieving R²=0.81 with XGBoost.',
-                businessProblem: 'Need for accurate housing price predictions across California's diverse market to support buyer and seller decisions.',
-                solution: [
-                    'Conducted thorough data exploration and cleaning',
-                    'Created custom features for housing density and quality',
-                    'Benchmarked multiple regression models',
-                    'Implemented XGBoost with hyperparameter tuning'
-                ],
-                techniques: [
-                    'Feature Engineering: Created bedrooms_per_room, population_per_household',
-                    'Data Preprocessing: One-hot encoding, PowerTransformer',
-                    'Model Comparison: Linear, KNN, Tree-based methods',
-                    'Performance Metrics: RMSE, MAE, MAPE, R²'
-                ],
-                impact: [
-                    'Achieved RMSE: 38,376',
-                    'MAE: 26,119.6',
-                    'MAPE: 16.02%',
-                    'R²: 0.81'
-                ],
-                challenges: [
-                    'Complex feature interactions',
-                    'Limited extrapolation above $314,000',
-                    'Need for regular model updates with new data'
-                ],
-                links: [
-                    { label: 'GitHub', url: 'https://github.com/AdibahR/California-Housing-Price-Prediction-using-Machine-Learning', icon: 'fab fa-github' }
-                ]
-            },
             'telco-churn': {
                 thumbnail: 'images/Window 6 - About.png',
                 title: 'Telco Customer Churn Prediction – IndoHome',
@@ -1391,6 +1191,204 @@
                     { label: 'Webapp', url: 'https://indohome-telco-churn-app-jaqqq4c38dcepxzzitrbzc.streamlit.app', icon: 'fas fa-globe' }
                 ]
             },
+            'neural-network': {
+                thumbnail: 'images/Publication 1.png',
+                title: 'Non-Invasive Blood Glucose Detection using ANN',
+                domain: 'Healthcare – Medical Diagnostics, AI/ML',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'ANN', icon: 'fas fa-brain' },
+                    { name: 'FTIR', icon: 'fas fa-wave-square' },
+                    { name: 'Spectroscopy', icon: 'fas fa-chart-line' },
+                    { name: 'Data Analysis', icon: 'fas fa-chart-bar' }
+                ],
+                summary: 'Research project developing a non-invasive blood glucose measurement technique using Artificial Neural Networks (ANN) and spectroscopy, eliminating the need for chemical reagents.',
+                businessProblem: 'Traditional blood glucose measurement methods are costly and require chemical reagents. The goal is to develop a non-invasive, cost-effective alternative using AI and spectroscopy.',
+                solution: [
+                    'Collected blood glucose samples under three conditions: fasting, 15 minutes post-sugar, and 30 minutes post-sugar.',
+                    'Measured absorbance using Buchi NIRFLEX 500 spectroscope between 1000-2500 nm.',
+                    'Developed ANN inference engine to identify optimal wavelength candidates.',
+                    'Analyzed and categorized wavelength ranges based on absorbance and standard deviation.'
+                ],
+                techniques: [
+                    'Spectral Analysis: 1000-2500 nm wavelength range',
+                    'ANN Development: Custom neural network architecture',
+                    'Data Collection: Three-phase sampling methodology',
+                    'Wavelength Selection: Based on absorbance and deviation metrics',
+                    'Validation: Accuracy testing against traditional methods'
+                ],
+                impact: [
+                    'Identified optimal wavelength ranges: 1923.08-2000 nm for primary measurement',
+                    'Additional effective ranges: 1041.67-1063.83 nm, 1063.83-1086.96 nm, 1351.35-1388.89 nm',
+                    'Successfully demonstrated ANN effectiveness for glycemic status monitoring'
+                ],
+                challenges: [
+                    'Ensuring measurement accuracy across different physiological conditions',
+                    'Optimizing ANN architecture for real-time analysis',
+                    'Validating results against established measurement methods'
+                ],
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR', icon: 'fab fa-github' },
+                    { label: 'Publication', url: 'https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/view/5483?articlesBySimilarityPage=44', icon: 'fas fa-file-alt' }
+                ]
+            },
+            'live-commerce': {
+                thumbnail: 'images/Publication 2.png',
+                title: 'Live Commerce Behavior in Fashion Industry',
+                domain: 'E-Commerce – Marketing Analytics, Consumer Behavior',
+                tools: [
+                    { name: 'SmartPLS', icon: 'fas fa-chart-bar' },
+                    { name: 'SPSS', icon: 'fas fa-calculator' },
+                    { name: 'Survey Analysis', icon: 'fas fa-poll' },
+                    { name: 'Statistical Modeling', icon: 'fas fa-chart-line' },
+                    { name: 'Data Visualization', icon: 'fas fa-chart-pie' }
+                ],
+                summary: 'Research study investigating how live-streaming commerce influences purchasing decisions in Indonesia\'s fashion industry, particularly focusing on SMEs.',
+                businessProblem: 'SMEs need to understand the effectiveness of live commerce as a marketing tool and the factors that influence consumer purchase intentions in the digital era.',
+                solution: [
+                    'Conducted consumer survey targeting fashion live-stream shoppers',
+                    'Analyzed multiple factors: media richness, price fairness, eWOM, social media marketing',
+                    'Applied PLS-SEM for comprehensive relationship analysis',
+                    'Evaluated brand image as a mediating factor'
+                ],
+                techniques: [
+                    'Survey Design: Targeted sampling of recent live commerce users',
+                    'PLS-SEM Analysis: Complex path modeling and mediation testing',
+                    'Factor Analysis: Multiple variable relationship assessment',
+                    'Statistical Validation: Reliability and validity testing'
+                ],
+                impact: [
+                    'Identified key drivers: media richness, price fairness, and social media marketing',
+                    'Revealed brand image as crucial mediator in purchase decisions',
+                    'Provided actionable insights for SMEs\' digital strategy optimization'
+                ],
+                challenges: [
+                    'Complex market dynamics affecting consumer behavior',
+                    'Limited impact of eWOM compared to other factors',
+                    'Need for continuous adaptation to evolving digital landscape'
+                ],
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR', icon: 'fab fa-github' },
+                    { label: 'Publication', url: 'https://ijcsrr.org/single-view/?id=15625&pid=15277', icon: 'fas fa-file-alt' }
+                ]
+            },
+            'car-management': {
+                thumbnail: 'images/Car Management System.png',
+                title: 'Car Management System with CRUD Operations',
+                domain: 'Application Development – Database Management',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'CLI', icon: 'fas fa-terminal' },
+                    { name: 'Tabulate', icon: 'fas fa-table' },
+                    { name: 'Colorama', icon: 'fas fa-palette' },
+                    { name: 'Database', icon: 'fas fa-database' }
+                ],
+                summary: 'A comprehensive Python-based car rental and fleet management system with role-based access control and robust CRUD operations.',
+                businessProblem: 'Need for an efficient system to manage car rentals, handle customer interactions, and maintain fleet inventory with different user access levels.',
+                solution: [
+                    'Developed dual-interface system for customers and administrators',
+                    'Implemented secure authentication and role-based access',
+                    'Created comprehensive CRUD operations for fleet management',
+                    'Built user-friendly CLI with enhanced visual feedback'
+                ],
+                techniques: [
+                    'Authentication: Secure login system with role validation',
+                    'Data Management: CRUD operations with data persistence',
+                    'UI/UX: Interactive CLI with Colorama for visual enhancement',
+                    'Reporting: Tabulate for structured data presentation'
+                ],
+                impact: [
+                    'Streamlined rental process for customers',
+                    'Enhanced inventory management efficiency',
+                    'Improved data accuracy and accessibility'
+                ],
+                challenges: [
+                    'Balancing functionality with user experience in CLI',
+                    'Implementing secure yet efficient authentication',
+                    'Ensuring data consistency across operations'
+                ],
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/CRUD-Car-Application', icon: 'fab fa-github' }
+                ]
+            },
+            'saas-sales': {
+                thumbnail: 'images/SaaS Sales.png',
+                title: 'SaaS Sales Growth Optimization via Analytics',
+                domain: 'Business Analytics – Sales Optimization',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'Pandas', icon: 'fas fa-table' },
+                    { name: 'Seaborn', icon: 'fas fa-chart-area' },
+                    { name: 'Matplotlib', icon: 'fas fa-chart-line' },
+                    { name: 'Data Analysis', icon: 'fas fa-analytics' }
+                ],
+                summary: 'Analysis of global SaaS company sales data across 48 countries and 262 cities to optimize sales performance and strategy.',
+                businessProblem: 'Need to identify growth opportunities and optimize sales strategies across multiple dimensions including geography, products, and customer segments.',
+                solution: [
+                    'Analyzed sales data using Python (Pandas) for data cleaning and transformation',
+                    'Created comprehensive visualizations with Seaborn and Matplotlib',
+                    'Identified key performance indicators across multiple dimensions',
+                    'Developed strategic recommendations based on data insights'
+                ],
+                techniques: [
+                    'Data Cleaning: Python/Pandas for data preparation',
+                    'EDA: Comprehensive analysis across multiple dimensions',
+                    'Visualization: Advanced charts and dashboards',
+                    'Statistical Analysis: Trend and pattern identification'
+                ],
+                impact: [
+                    'Identified negative correlation between discounts and profit',
+                    'Discovered seasonal patterns with peaks in November/December',
+                    'Recommended focus on high-performing products and regions'
+                ],
+                challenges: [
+                    'Complex data integration across multiple regions',
+                    'Balancing multiple performance metrics',
+                    'Developing actionable insights from large dataset'
+                ],
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/AWS-SaaS-Sales-Data-Analysis-for-Business-Growth-Optimization', icon: 'fab fa-github' }
+                ]
+            },
+            'housing-price': {
+                thumbnail: 'images/California Housing.png',
+                title: 'California Housing Price Prediction',
+                domain: 'Machine Learning – Real Estate Analytics',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'Scikit-learn', icon: 'fas fa-cogs' },
+                    { name: 'XGBoost', icon: 'fas fa-bolt' },
+                    { name: 'Feature Engineering', icon: 'fas fa-code-branch' },
+                    { name: 'Data Analysis', icon: 'fas fa-chart-bar' }
+                ],
+                summary: 'Machine learning project to predict median housing prices in California using census data, achieving R² of 0.81 with XGBoost.',
+                businessProblem: 'Need for accurate housing price predictions across California\'s diverse market to support informed buying and selling decisions.',
+                solution: [
+                    'Conducted thorough data exploration and cleaning',
+                    'Created innovative features for housing density and quality',
+                    'Benchmarked multiple regression models',
+                    'Implemented XGBoost with hyperparameter tuning'
+                ],
+                techniques: [
+                    'Feature Engineering: Created density and quality metrics',
+                    'Data Preprocessing: One-hot encoding, PowerTransformer',
+                    'Model Selection: Comprehensive algorithm comparison',
+                    'Performance Metrics: RMSE, MAE, MAPE, R²'
+                ],
+                impact: [
+                    'Achieved R² of 0.81 with XGBoost',
+                    'RMSE: 38,376, MAE: 26,119.6, MAPE: 16.02%',
+                    'Identified key price influencers: median income and ocean proximity'
+                ],
+                challenges: [
+                    'Limited accuracy for prices above $314,000',
+                    'Need for more recent property data',
+                    'Complex feature interactions'
+                ],
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/California-Housing-Price-Prediction-using-Machine-Learning', icon: 'fab fa-github' }
+                ]
+            },
             'ecommerce-churn': {
                 thumbnail: 'images/Window 6 - About.png',
                 title: 'E-Commerce Customer Churn Prediction',
@@ -1398,34 +1396,33 @@
                 tools: [
                     { name: 'Python', icon: 'fab fa-python' },
                     { name: 'XGBoost', icon: 'fas fa-bolt' },
-                    { name: 'SHAP', icon: 'fas fa-chart-bar' },
+                    { name: 'SHAP', icon: 'fas fa-chart-line' },
                     { name: 'Streamlit', icon: 'fas fa-rocket' },
-                    { name: 'Tableau', icon: 'fas fa-chart-line' }
+                    { name: 'Tableau', icon: 'fas fa-chart-bar' }
                 ],
-                summary: 'End-to-end machine learning project to predict customer churn in e-commerce, achieving F2 score of 0.9617 with potential monthly cost savings of ₹45M.',
-                businessProblem: 'E-commerce platforms face high churn rates due to intense competition. The goal is to predict and prevent churn through targeted retention strategies.',
+                summary: 'End-to-end machine learning project for predicting e-commerce customer churn, achieving F2 score of 0.9617 with significant cost-saving potential.',
+                businessProblem: 'E-commerce platforms need to identify and retain customers at risk of churning while optimizing retention campaign costs.',
                 solution: [
-                    'Conducted comprehensive EDA and feature engineering',
-                    'Implemented XGBoost model with optimization',
-                    'Used SHAP for model interpretation',
-                    'Deployed via Streamlit with business impact simulation'
+                    'Developed end-to-end ML workflow from EDA to deployment',
+                    'Implemented XGBoost with advanced feature engineering',
+                    'Created interactive Streamlit app for predictions',
+                    'Built comprehensive Tableau dashboards for insights'
                 ],
                 techniques: [
-                    'Advanced Feature Engineering',
-                    'XGBoost Implementation',
-                    'SHAP Value Analysis',
-                    'Cost-Benefit Analysis',
-                    'Streamlit Deployment'
+                    'Advanced EDA and Feature Engineering',
+                    'XGBoost Implementation and Optimization',
+                    'SHAP Analysis for Model Interpretation',
+                    'Streamlit Deployment for Production'
                 ],
                 impact: [
                     'Achieved F2 score of 0.9617',
-                    'Projected monthly savings of ₹45M',
-                    'Enhanced targeting accuracy'
+                    'Projected cost savings of ₹45M/month',
+                    'Enhanced targeting accuracy for retention campaigns'
                 ],
                 challenges: [
-                    'Complex feature interactions',
-                    'Real-time prediction requirements',
-                    'Cost-effective intervention strategy'
+                    'Balancing model complexity with interpretability',
+                    'Handling class imbalance in churn prediction',
+                    'Real-time integration challenges'
                 ],
                 links: [
                     { label: 'GitHub', url: 'https://github.com/AdibahR/ecommerce-churn-prediction', icon: 'fab fa-github' },
