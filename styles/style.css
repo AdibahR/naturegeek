@@ -1605,3 +1605,15 @@ body {
         padding: 1.2em 0.5em;
     }
 }
+
+/* Certificate Button Styles */
+.cert-button:hover {
+    background: #e8e8e8 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cert-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
