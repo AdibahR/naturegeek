@@ -535,6 +535,12 @@
                                 <h4>Next Steps</h4>
                                 <p>Explore wearable sensor integrations</p>
                             </div>
+                            <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="neural-network" style="width:100%;margin-bottom:1rem;">View Details</button>
+                                <a href="https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/view/5483?articlesBySimilarityPage=44" target="_blank" class="publication-link" aria-label="View Publication">
+                                    <i class="fas fa-external-link-alt"></i> View Publication
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -561,6 +567,7 @@
                                 <span class="tool"><i class="fab fa-google"></i> Google Forms</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="live-commerce" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://ijcsrr.org/single-view/?id=15625&pid=15277" target="_blank" class="publication-link" aria-label="View Publication">
                                     <i class="fas fa-external-link-alt"></i> View Publication
                                 </a>
@@ -591,6 +598,7 @@
                                 <span class="tool"><i class="fas fa-table"></i> Tabulate</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="car-management" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://github.com/AdibahR/CRUD-Car-Application" target="_blank" class="github-link" aria-label="View Project on GitHub">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
@@ -621,6 +629,7 @@
                                 <span class="tool"><i class="fas fa-chart-line"></i> Matplotlib</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="saas-sales" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://github.com/AdibahR/AWS-SaaS-Sales-Data-Analysis-for-Business-Growth-Optimization" target="_blank" class="github-link" aria-label="View Project on GitHub">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
@@ -651,6 +660,7 @@
                                 <span class="tool"><i class="fas fa-code-branch"></i> Feature Engineering</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="housing-price" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://github.com/AdibahR/California-Housing-Price-Prediction-using-Machine-Learning" target="_blank" class="github-link" aria-label="View Project on GitHub">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
@@ -686,6 +696,7 @@
                                 <span class="tool"><i class="fas fa-chart-bar"></i> Tableau</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="telco-churn" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://github.com/AdibahR/Indohome-telco-churn-app" target="_blank" class="github-link" aria-label="View Project on GitHub">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
@@ -722,12 +733,21 @@
                                 <span class="tool"><i class="fas fa-rocket"></i> Streamlit</span>
                             </div>
                             <div class="project-actions">
+                                <button class="cta-button project-detail-btn" data-project="ecommerce-churn" style="width:100%;margin-bottom:1rem;">View Details</button>
                                 <a href="https://github.com/AdibahR/ECommerce-Churn-Prediction" target="_blank" class="github-link" aria-label="View Project on GitHub">
                                     <i class="fab fa-github"></i> View on GitHub
                                 </a>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Project Details Modal -->
+            <div id="project-modal" class="pub-modal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.45);align-items:center;justify-content:center;">
+                <div class="pub-modal-content" style="background:#fff;padding:2.5em 2em;max-width:650px;width:90vw;max-height:85vh;overflow-y:auto;border-radius:1.2em;box-shadow:0 8px 32px rgba(0,0,0,0.18);position:relative;">
+                    <button id="project-modal-close" style="position:absolute;top:1em;right:1em;background:none;border:none;font-size:1.5em;cursor:pointer;color:#888;z-index:10;">&times;</button>
+                    <div id="project-modal-body"></div>
                 </div>
             </div>
         </section>
@@ -1083,6 +1103,341 @@
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
+        
+        // Project Details Modal System
+        const projectDetails = {
+            'neural-network': {
+                thumbnail: 'images/Publication 1.png',
+                title: 'Non-Invasive Blood Glucose Detection using ANN',
+                domain: 'Healthcare – Medical Diagnostics, AI/ML',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'ANN', icon: 'fas fa-brain' },
+                    { name: 'FTIR Spectroscopy', icon: 'fas fa-wave-square' },
+                    { name: 'Data Analysis', icon: 'fas fa-chart-bar' }
+                ],
+                summary: 'Research is currently ongoing to eliminate the reagent cost of blood glucose level measurement. This study\'s objective is to construct, develop and test the effectiveness of an artificial neural network (ANN) method for measuring blood glucose levels without the use of reagents.',
+                businessProblem: 'Traditional blood glucose measurement methods are costly and require chemical reagents, making frequent monitoring expensive and inconvenient for patients.',
+                solution: [
+                    'Blood glucose sample is taken from three conditions—fasting, 15 minutes after drinking sugar water and 30 minutes after drinking sugar water',
+                    'Absorbance is measured using Buchi NIRFLEX 500 spectroscope between 1000 and 2500 nm',
+                    'Analyzed using an ANN inference engine to find wavelength candidates',
+                    'Categorized the best candidates by the highest absorbance and standard deviation'
+                ],
+                techniques: [
+                    'Spectral Analysis: 1000-2500 nm wavelength range',
+                    'ANN Development: Custom neural network architecture',
+                    'Data Collection: Three-phase sampling methodology',
+                    'Wavelength Selection: Based on absorbance and deviation metrics',
+                    'Validation: Accuracy testing against traditional methods'
+                ],
+                impact: 'The ANN artificial intelligence technique was effectively applied and resulted in wavelength candidates suitable for monitoring blood glucose levels in humans, both in terms of accuracy and the capacity to identify glycaemic status. Results at 1923.08 nm to 2000 nm and result in measurement accuracy specifically at 3 range of wavelength number: 1041.67 nm to 1063.83 nm, 1063.83 nm to 1086.96 nm and 1351.35 nm to 1388.89 nm.',
+                challenges: 'Ensuring measurement accuracy across different physiological conditions, optimizing ANN architecture for real-time analysis, and validating results against established measurement methods.',
+                links: [
+                    { label: 'Publication', url: 'https://semarakilmu.com.my/journals/index.php/applied_sciences_eng_tech/article/view/5483?articlesBySimilarityPage=44', icon: 'fas fa-file-alt' }
+                ]
+            },
+            'live-commerce': {
+                thumbnail: 'images/Publication 2.png',
+                title: 'Live Commerce Behavior in Fashion Industry',
+                domain: 'E-Commerce – Marketing Analytics, Consumer Behavior',
+                tools: [
+                    { name: 'SmartPLS', icon: 'fas fa-chart-bar' },
+                    { name: 'SPSS', icon: 'fas fa-calculator' },
+                    { name: 'Survey Analysis', icon: 'fas fa-poll' },
+                    { name: 'Statistical Modeling', icon: 'fas fa-chart-line' }
+                ],
+                summary: 'This study investigates the impact of live-streaming commerce on the Indonesian fashion industry, with a specific focus on small and medium-sized enterprises (SMEs). It explores how factors like perceived media richness, price fairness, electronic word-of-mouth (eWOM), social media marketing, and brand image influence consumer purchase intentions.',
+                businessProblem: 'SMEs need to understand the effectiveness of live commerce as a marketing tool and the factors that influence consumer purchase intentions in the digital era.',
+                solution: [
+                    'Conducted consumer survey targeting fashion live-stream shoppers',
+                    'Analyzed multiple factors: media richness, price fairness, eWOM, social media marketing',
+                    'Applied PLS-SEM for comprehensive relationship analysis',
+                    'Evaluated brand image as a mediating factor'
+                ],
+                techniques: [
+                    'Survey Design: Targeted sampling of recent live commerce users',
+                    'PLS-SEM Analysis: Complex path modeling and mediation testing',
+                    'Factor Analysis: Multiple variable relationship assessment',
+                    'Statistical Validation: Reliability and validity testing'
+                ],
+                impact: 'The findings analyzed using Partial Least Squares Structural Equation Modeling (PLS-SEM), reveal the pivotal role of media richness, price fairness, and social media marketing in shaping purchase intentions, with brand image emerging as a key mediator. The study contributes valuable insights for SMEs looking to optimize their digital strategies and enhance sales effectiveness in the rapidly evolving e-commerce landscape.',
+                challenges: 'Complex market dynamics affecting consumer behavior, limited impact of eWOM compared to other factors, and need for continuous adaptation to evolving digital landscape.',
+                links: [
+                    { label: 'Publication', url: 'https://ijcsrr.org/single-view/?id=15625&pid=15277', icon: 'fas fa-file-alt' }
+                ]
+            },
+            'car-management': {
+                thumbnail: 'images/Car Management System.png',
+                title: 'Car Management System with CRUD Operations',
+                domain: 'Application Development – Database Management',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'CLI', icon: 'fas fa-terminal' },
+                    { name: 'Tabulate', icon: 'fas fa-table' },
+                    { name: 'Colorama', icon: 'fas fa-palette' }
+                ],
+                summary: 'I developed a Python-based Car Management System that simulates a comprehensive car rental and fleet management solution using robust CRUD operations. This project caters to two distinct user roles—customers and administrators—each with tailored functionalities to streamline the rental process and fleet maintenance.',
+                businessProblem: 'Need for an efficient system to manage car rentals, handle customer interactions, and maintain fleet inventory with different user access levels.',
+                solution: [
+                    'Developed dual-interface system for customers and administrators',
+                    'Implemented secure authentication and role-based access',
+                    'Created comprehensive CRUD operations for fleet management',
+                    'Built user-friendly CLI with enhanced visual feedback'
+                ],
+                techniques: [
+                    'Authentication: Secure login system with role validation',
+                    'Data Management: CRUD operations with data persistence',
+                    'UI/UX: Interactive CLI with Colorama for visual enhancement',
+                    'Reporting: Tabulate for structured data presentation'
+                ],
+                impact: 'This project not only reinforces my proficiency in Python and fundamental programming concepts but also exemplifies my ability to design and implement practical solutions for real-world business challenges. The system streamlines rental process for customers, enhances inventory management efficiency, and improves data accuracy and accessibility.',
+                challenges: 'Balancing functionality with user experience in CLI, implementing secure yet efficient authentication, and ensuring data consistency across operations.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/CRUD-Car-Application', icon: 'fab fa-github' }
+                ]
+            },
+            'saas-sales': {
+                thumbnail: 'images/SaaS Sales.png',
+                title: 'SaaS Sales Growth Optimization via Analytics',
+                domain: 'Business Analytics – Sales Optimization',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'Pandas', icon: 'fas fa-table' },
+                    { name: 'Seaborn', icon: 'fas fa-chart-area' },
+                    { name: 'Matplotlib', icon: 'fas fa-chart-line' }
+                ],
+                summary: 'This capstone project focused on analyzing sales data from a global SaaS company operating across 48 countries and 262 cities. The main objective was to discover strategic insights to boost sales performance across multiple dimensions such as customer segments, product categories, geographic regions, industries, discount strategies, and time periods.',
+                businessProblem: 'Need to identify growth opportunities and optimize sales strategies across multiple dimensions including geography, products, and customer segments.',
+                solution: [
+                    'Cleaning and transforming raw sales data using Python (Pandas)',
+                    'Performing exploratory data analysis (EDA) and visualizations with Seaborn and Matplotlib',
+                    'Identifying top-performing products, regions, and customer segments',
+                    'Analyzing the impact of discounts and quantities on profit and sales'
+                ],
+                techniques: [
+                    'Data Cleaning: Python/Pandas for data preparation',
+                    'EDA: Comprehensive analysis across multiple dimensions',
+                    'Visualization: Advanced charts and dashboards',
+                    'Statistical Analysis: Trend and pattern identification'
+                ],
+                impact: 'Findings showed that discounts negatively affected profit but had little impact on sales volume, while higher quantities correlated with better sales outcomes. November and December showed strong seasonal peaks, whereas February was a weak month. This project highlights strong skills in data storytelling, business insight generation, and statistical thinking.',
+                challenges: 'Complex data integration across multiple regions, balancing multiple performance metrics, and developing actionable insights from large dataset.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/AWS-SaaS-Sales-Data-Analysis-for-Business-Growth-Optimization', icon: 'fab fa-github' }
+                ]
+            },
+            'housing-price': {
+                thumbnail: 'images/California Housing.png',
+                title: 'California Housing Price Prediction',
+                domain: 'Machine Learning – Real Estate Analytics',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'Scikit-learn', icon: 'fas fa-cogs' },
+                    { name: 'XGBoost', icon: 'fas fa-bolt' },
+                    { name: 'Feature Engineering', icon: 'fas fa-code-branch' }
+                ],
+                summary: 'In this project, I built a machine learning model to predict median housing prices in California using census data. The goal was to support buyers and sellers in making data-driven pricing decisions in a highly diverse housing market across 58 counties.',
+                businessProblem: 'Need for accurate housing price predictions across California\'s diverse market to support informed buying and selling decisions.',
+                solution: [
+                    'Conducting data exploration, handling missing values, and removing outliers',
+                    'Creating new features such as bedrooms_per_room and population_per_household to capture housing density and quality',
+                    'Applying one-hot encoding and PowerTransformer to prepare data for modeling',
+                    'Benchmarked several regression models and implemented XGBoost with hyperparameter tuning'
+                ],
+                techniques: [
+                    'Feature Engineering: Created density and quality metrics',
+                    'Data Preprocessing: One-hot encoding, PowerTransformer',
+                    'Model Selection: Comprehensive algorithm comparison',
+                    'Performance Metrics: RMSE, MAE, MAPE, R²'
+                ],
+                impact: 'After hyperparameter tuning, XGBoost emerged as the best performer with RMSE: 38,376, MAE: 26,119.6, MAPE: 16.02%, R²: 0.81. Key insights revealed that median income and proximity to the ocean were the most influential features. The final model was saved using pickle for future deployment.',
+                challenges: 'Limited accuracy for prices above $314,000, need for more recent property data, and complex feature interactions.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/California-Housing-Price-Prediction-using-Machine-Learning', icon: 'fab fa-github' }
+                ]
+            },
+            'telco-churn': {
+                thumbnail: 'images/Window 6 - About.png',
+                title: 'Customer Churn Prediction – Telco (IndoHome)',
+                domain: 'Telecommunication – Customer Retention, Marketing Analytics',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'Scikit-learn', icon: 'fas fa-cogs' },
+                    { name: 'ADASYN', icon: 'fas fa-balance-scale' },
+                    { name: 'Streamlit', icon: 'fas fa-rocket' },
+                    { name: 'Tableau', icon: 'fas fa-chart-bar' }
+                ],
+                summary: 'This project focuses on predicting customer churn for IndoHome, a fictional broadband telecom provider. Using machine learning and business analytics, it aims to identify high-risk customers and support targeted retention strategies in a competitive telecom market.',
+                businessProblem: 'IndoHome faces a high churn rate, impacting revenue and business growth. The goal is to build a data-driven model that helps the marketing and customer management teams detect churn risk early and take proactive actions.',
+                solution: [
+                    'Conducted deep EDA to identify churn drivers (e.g., contract type, services used, tenure)',
+                    'Built a Logistic Regression model with ADASYN to handle class imbalance',
+                    'Deployed the solution using Streamlit and created three interactive Tableau dashboards for business teams',
+                    'Designed a cost-saving simulation to compare model-driven strategy vs. mass promotion vs. no intervention'
+                ],
+                techniques: [
+                    'Feature Engineering: Added ServiceCount, TenureGroup, PriceVariation',
+                    'Data Processing: OneHotEncoding, StandardScaler',
+                    'Resampling: ADASYN to balance minority churn class',
+                    'Threshold Optimization: Custom threshold for maximizing recall',
+                    'Model Evaluation: F2-score, Recall, Precision, Confusion Matrix',
+                    'Deployment: Streamlit for interface, Tableau for executive dashboards'
+                ],
+                impact: 'Demonstrated how model-based targeting could reduce retention cost significantly compared to mass offers or doing nothing. Enabled better resource allocation by focusing only on high-risk customers.',
+                challenges: 'Public dataset may not reflect real IndoHome behaviors → Real-world deployment requires CRM integration. Logistic Regression was chosen for interpretability, enabling actionable business insights. Model was kept lightweight for fast deployment and real-time prediction.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/Indohome-telco-churn-app', icon: 'fab fa-github' },
+                    { label: 'Dashboard', url: 'https://public.tableau.com/app/profile/rina.adibah/viz/IndoHomeChurnAnalysisDashboard/Dashboard1-ExecutiveOverview', icon: 'fas fa-chart-bar' },
+                    { label: 'Webapp', url: 'https://indohome-telco-churn-app-jaqqq4c38dcepxzzitrbzc.streamlit.app', icon: 'fas fa-globe' }
+                ]
+            },
+            'ecommerce-churn': {
+                thumbnail: 'images/Thumbnail - E-Commerce Customer Churn Prediction.png',
+                title: 'E-Commerce Customer Churn Prediction',
+                domain: 'E-Commerce – Customer Analytics, Retention Strategy',
+                tools: [
+                    { name: 'Python', icon: 'fab fa-python' },
+                    { name: 'XGBoost', icon: 'fas fa-bolt' },
+                    { name: 'SHAP', icon: 'fas fa-chart-line' },
+                    { name: 'Streamlit', icon: 'fas fa-rocket' }
+                ],
+                summary: 'Built a machine learning model to predict customer churn in an e-commerce setting using XGBoost (F2 score: 0.9617). Conducted end-to-end workflow from EDA, preprocessing, and modeling to SHAP interpretation and Streamlit deployment. Business impact simulation showed a cost-saving potential of ₹45M/month.',
+                businessProblem: 'E-commerce platforms need to identify and retain customers at risk of churning while optimizing retention campaign costs.',
+                solution: [
+                    'Developed end-to-end ML workflow from EDA to deployment',
+                    'Implemented XGBoost with advanced feature engineering',
+                    'Created interactive Streamlit app for predictions',
+                    'Built comprehensive business impact analysis'
+                ],
+                techniques: [
+                    'Advanced EDA and Feature Engineering',
+                    'XGBoost Implementation and Optimization',
+                    'SHAP Analysis for Model Interpretation',
+                    'Streamlit Deployment for Production'
+                ],
+                impact: 'Achieved F2 score of 0.9617 with projected cost savings of ₹45M/month through targeted retention campaigns. Enhanced targeting accuracy for retention campaigns and provided actionable insights for business strategy.',
+                challenges: 'Balancing model complexity with interpretability, handling class imbalance in churn prediction, and ensuring real-time integration capabilities.',
+                links: [
+                    { label: 'GitHub', url: 'https://github.com/AdibahR/ECommerce-Churn-Prediction', icon: 'fab fa-github' }
+                ]
+            }
+        };
+        
+        // Project Details Modal Event Listeners
+        document.querySelectorAll('.project-detail-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const proj = projectDetails[this.getAttribute('data-project')];
+                document.getElementById('project-modal-body').innerHTML = `
+                    <div style='text-align:center;margin-bottom:1.5em;'>
+                        <img src='${proj.thumbnail}' alt='${proj.title} Thumbnail' style='width:100%;max-width:600px;height:auto;object-fit:contain;margin-bottom:1.5em;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.1);'>
+                        <h3 style='font-size:1.3rem;font-weight:700;margin-bottom:0.3em;color:var(--text-color);'>${proj.title}</h3>
+                        <p style='font-weight:600;color:var(--accent-color);margin-bottom:1em;'>${proj.domain}</p>
+                        <div style='margin-bottom:0.5em;'>
+                            <p style='font-size:0.95rem;color:var(--text-gray);margin-bottom:0.7em;'><strong>Tools Used:</strong></p>
+                            <div style='display:flex;flex-wrap:wrap;gap:0.7em;justify-content:center;'>
+                                ${proj.tools.map(tool => `
+                                    <span style='
+                                        display:inline-flex;
+                                        align-items:center;
+                                        gap:0.4em;
+                                        padding:0.4em 0.8em;
+                                        background:var(--background-color);
+                                        color:var(--text-color);
+                                        border-radius:1.5em;
+                                        font-size:0.85rem;
+                                        font-weight:500;
+                                        border:1px solid rgba(0,0,0,0.1);
+                                    '>
+                                        <i class='${tool.icon}' style='color:var(--accent-color);'></i>
+                                        ${tool.name}
+                                    </span>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Project Summary</h4>
+                        <p style='line-height:1.6;color:var(--text-color);'>${proj.summary}</p>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Business Problem</h4>
+                        <p style='line-height:1.6;color:var(--text-color);'>${proj.businessProblem}</p>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Solution Overview</h4>
+                        <ul style='padding-left:1.2em;line-height:1.6;color:var(--text-color);'>
+                            ${proj.solution.map(item => `<li style='margin-bottom:0.5em;'>${item}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Core Techniques Used</h4>
+                        <ul style='padding-left:1.2em;line-height:1.6;color:var(--text-color);'>
+                            ${proj.techniques.map(tech => `<li style='margin-bottom:0.5em;'>${tech}</li>`).join('')}
+                        </ul>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Business Impact & Results</h4>
+                        <p style='line-height:1.6;color:var(--text-color);'>${proj.impact}</p>
+                    </div>
+                    
+                    <div style='margin-bottom:1.5em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:0.7em;border-bottom:2px solid var(--background-color);padding-bottom:0.3em;'>Challenges & Insights</h4>
+                        <p style='line-height:1.6;color:var(--text-color);'>${proj.challenges}</p>
+                    </div>
+                    
+                    <div style='text-align:center;margin-top:2em;'>
+                        <h4 style='font-size:1.1rem;font-weight:600;color:var(--accent-color);margin-bottom:1em;'>Project Links</h4>
+                        <div style='display:flex;gap:1em;justify-content:center;flex-wrap:wrap;'>
+                            ${proj.links.map(link => `
+                                <a href='${link.url}' target='_blank' rel='noopener noreferrer' style='
+                                    display:inline-flex;
+                                    align-items:center;
+                                    gap:0.5em;
+                                    padding:0.7em 1.2em;
+                                    background:var(--background-color);
+                                    color:var(--text-color);
+                                    text-decoration:none;
+                                    border-radius:2em;
+                                    font-size:0.95rem;
+                                    font-weight:500;
+                                    transition:all 0.3s ease;
+                                    min-width:100px;
+                                    justify-content:center;
+                                ' onmouseover='this.style.background="var(--accent-color)"; this.style.color="var(--white)";' onmouseout='this.style.background="var(--background-color)"; this.style.color="var(--text-color)";'>
+                                    <i class='${link.icon}'></i> ${link.label}
+                                </a>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                document.getElementById('project-modal').style.display = 'flex';
+            });
+        });
+        
+        // Project Modal Close Events
+        document.getElementById('project-modal-close').onclick = function() {
+            document.getElementById('project-modal').style.display = 'none';
+        };
+        
+        document.getElementById('project-modal-close').addEventListener('mouseover', function() {
+            this.style.color = 'var(--accent-color)';
+        });
+        
+        document.getElementById('project-modal-close').addEventListener('mouseout', function() {
+            this.style.color = '#888';
+        });
+        
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('project-modal')) {
+                document.getElementById('project-modal').style.display = 'none';
+            }
+        };
     </script>
 </body>
 </html>
